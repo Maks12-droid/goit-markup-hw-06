@@ -428,7 +428,7 @@ button {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 264px;
+  width: 264px;
 }
 
 .logo {
@@ -477,8 +477,7 @@ button {
   fill: var(--back-gr-cl);
 }
 
-.footer-send-lable {
-  display: block;
+.footer-send-text {
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -499,8 +498,18 @@ button {
   outline-offset: -2px;
   width: 264px;
   height: 40px;
-  background-color: var(--color-logo-span);
   padding: 8px 16px;
+  color: #fff;
+  background-color: var(--color-logo-span);
+}
+
+.footer-send-input::placeholder {
+  color: var(--color-icons);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-send-input:focus::placeholder {
+  color: transparent;
 }
 
 .footer-send-btn {
@@ -508,6 +517,7 @@ button {
   height: 40px;
   background-color: var(--color-logo);
   border: 1px solid var(--color-logo);
+  border-radius: 4px;
   padding: 8px 0 8px 24px;
   font-weight: 500;
   font-size: 16px;
@@ -553,36 +563,33 @@ button {
 
   width: 408px;
 
-  background-color: var(--back-gr-cl);
+  background: #fcfcfc;
   border-radius: 4px;
+  padding: 24px;
 }
 
 .modal-btn {
   display: block;
-  margin: 24px;
   margin-left: auto;
+  margin-bottom: 24px;
   border-radius: 50%;
   border: 1px solid #8e8f99;
   background-color: #e7e9fc;
+  color: var(--color-logo-span);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--color-logo);
   border-color: var(--color-logo);
+  color: #fff;
 }
 
 .modal-icon {
-  fill: var(--color-logo-span);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-icon:hover,
-.modal-icon:focus {
-  fill: #fff;
+  fill: currentColor;
 }
 
 .modal-title {
@@ -592,12 +599,12 @@ button {
   text-align: center;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .modal-field {
   position: relative;
-  margin: 0 24px 8px;
+  margin-bottom: 8px;
 }
 
 .modal-input-icon {
@@ -609,8 +616,8 @@ button {
 }
 
 .modal-label {
-  padding: 4px;
-  margin-left: 24px;
+  display: block;
+  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
@@ -639,8 +646,7 @@ button {
 
 .modal-textarea {
   display: block;
-  margin: 0 24px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   padding: 8px 16px;
   width: 360px;
   min-height: 120px;
@@ -659,8 +665,8 @@ button {
 
 .modal-checkbox-container {
   display: flex;
-  margin: auto 24px;
   gap: 8px;
+  margin-bottom: 24px;
 }
 
 .modal-checkbox {
@@ -698,7 +704,7 @@ button {
   border-radius: 4px;
   color: white;
   display: block;
-  margin: 16px auto 24px;
+  margin: 0 auto;
   min-width: 169px;
   border: none;
   transition: background 250ms;
