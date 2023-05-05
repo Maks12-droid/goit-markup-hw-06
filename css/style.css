@@ -571,7 +571,7 @@ button {
 .modal-btn {
   display: block;
   margin-left: auto;
-  margin-bottom: 24px;
+  margin: 0 0 24px auto;
   border-radius: 50%;
   border: 1px solid #8e8f99;
   background-color: #e7e9fc;
